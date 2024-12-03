@@ -8,3 +8,11 @@
 .vscode
 
 
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
+*.dll
+*.pdb
