@@ -1,0 +1,10 @@
+#ignore all files without any extension
+*
+#allow files with exensions
+!*.*
+!*/
+
+#ignore the file of the .vs code
+.vscode
+
+
