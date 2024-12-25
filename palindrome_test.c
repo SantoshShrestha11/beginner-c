@@ -1,22 +1,27 @@
+#include<stdio.h>
 #include<string.h>
-#include <stdio.h>
 int main() {
-    char str[100];
-    char rev_str[100];
-    int len = strlen(str);
-    printf("Enter a string = ");
-    fgets(str, sizeof(str), stdin); // fgets is safe then gets (learn about buffer size for gets)
+    char str[100], rev_str[100];
+    int result;
+    printf("Enter the string = ");
+    fgets(str, sizeof(str), stdin);
+
     str[strcspn(str, "\n")] = '\0';
+    int length = strlen(str);
 
-    strcpy(rev_str, str);
-    strrev(rev_str);
+    for(int i=0; i<length; i++) {
+        rev_str[i] =str[length-i-1];
+    }
+    rev_str[length] = '\0';
 
-    for(int i=0, i<len, i++){
-        str[i] = rev_str[i];
-        printf("The inputed string is palindrome");
+
+    result = strcmp(str, rev_str);
+    if (result == 0) {
+        printf("The string is a palindrome.\n");
+    } else {
+        printf("The string is not a palindrome.\n");
     }
-    else{
-        printf("The inputed string is not palindrome");
-    }
+
     return 0;
 }
+
