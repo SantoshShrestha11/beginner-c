@@ -17,7 +17,7 @@ int main() {
     printf("The original variables after swap function is called are:\nfirst variable = %d\nsecond variable = %d\n",val1,val2);
     return 0;
 }
-// Call by refrence method is used so there is no change is original values
+// Call by value method is used so there is no change is original values
 void swap(int val1, int val2) {   
     int temp=val1;
     val1 = val2;
